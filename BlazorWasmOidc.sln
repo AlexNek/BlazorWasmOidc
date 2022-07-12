@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmOidc", "BlazorWasmOidc\BlazorWasmOidc.csproj", "{310F040F-2E74-4AFC-9A4D-37D4666F7FD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmOidc", "BlazorWasmOidc\BlazorWasmOidc.csproj", "{310F040F-2E74-4AFC-9A4D-37D4666F7FD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docu", "Docu", "{7C796B20-4A84-4E90-BD1B-AE143C915EAA}"
+	ProjectSection(SolutionItems) = preProject
+		Docu\keycloak.md = Docu\keycloak.md
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
