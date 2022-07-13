@@ -101,6 +101,15 @@ Then we need to add the next section to appsettings.json
 Where is you must replace `your-domain.com` with your keykloak url, `Sample` with your realm name, `sample-client` with your client name. You can add any scope in addition to roles.
 < NOTE: `openid` scope will be added automatically so we can use code flow only
 
+#### Run application
+You can run application now and press login. You can see the next page with predefined login template.
+![keycloak login image](images/keycloak-login.png)
+
+< NOTE: `Remember me` has sense for server only. For security reason it is not recomend to store any tokens client side.
+< When you press refresh page button then you will need to login again but without typping your credential.
+ 
+And finally, our user claims:
+![keycloak login image](images/user-claims.png)
 
 ### Links
 1. [Keycloak - main](https://www.keycloak.org/)
