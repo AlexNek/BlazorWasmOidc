@@ -29,15 +29,15 @@ If you use docker under unix don't forget about folder permissions. Pay attentio
 The next important step is to create a claim.   
 ![add claim image](images/add-claim.png) 
 
-Because keycloak can work with different clients, and each client can have its own URL or settings, we need to have a "storage room" for each client. this room is called a claim, and there is one default claim, the main claim. It is not recommended to use it for external calls. Each claim has his own users.
+Because keycloak can work with different clients, and each client can have its own URL or settings, we need to have a "storage room" for each client. This room is called a claim, and there is one default claim, the main claim. It is not recommended to use it for external calls. Each claim has his own users.
 
 Interested settings for the future use are Login(2), Email(3) and Security Defences(4). Login page itself will be designed according to settings. 
 ![claim login image](images/claim-login.png) 
 
-> NOTE. Don't play with themes and docker installation. When I start to play, I haven't any themes after it.
+> NOTE. Do not play with themes when using docker installing. When I started playing, I didn't have any themes on the pages after that.
 
 On Email page it is possible to setup SMTP server for sending E-mails directly from keycloak. 
-##### Create client
+#### Create client
 
 The next step is to create a client
 ![claim login image](images/add-client.png)
@@ -50,7 +50,7 @@ It is very important to fill in all the relevant URLs
 #### Create user 
 The next step is to create a user
 ![add user image 1](images/add-user.png)
-I set `Requered User actions` to update profile. This means that after the first login, the user must fill out his profile.
+I set `Required User actions` to update profile. This means that after the first login, the user must fill out his profile.
 
 ![add user image 1](images/add-user1.png)
 
@@ -60,7 +60,7 @@ In addition, I set permanent user password. It is possible to set temporary user
 #### Create user role
 
 The next step is optional, if you want to use user roles.
-First we need to create a role itselft.
+First we need to create a role itself.
 ![add user image 1](images/add-role1.png)
 
 And then add role to the to our test user.  
@@ -68,9 +68,38 @@ And then add role to the to our test user.
 < NOTE. We can add role to default roles group if this role must have all users by default
 
 If we want to have roles or some additional user information then we need to add client mapper for our client
-![claim login image](images/add-client-mapper.png) 
-![claim login image](images/client-mapper.png) 
+![add client mapper image 1](images/add-client-mapper.png) 
+![add client mapper image 2](images/client-mapper.png) 
 
+#### Settings for C#
+
+Since we use an HTTP server, we also need to use an HTTP client. Not recommended for production environment. 
+Open Launch properties
+![change project properties image 1](images/prj-prop.png)
+and remove https part from `App URL` 
+![change project properties image 2](images/prj-prop2.png) 
+
+Then we need to add the next section to appsettings.json
+
+![change project properties image 2](images/appsettings.png)
+
+```JSON
+{
+  "Keycloak": {
+    "Authority": "http://your-domain.com/auth/realms/Sample",
+    "ClientId": "sample-client",
+
+    "DefaultScopes": [
+      "roles"
+    ],
+    "ResponseType": "code"
+  }
+
+}
+```
+
+Where is you must replace `your-domain.com` with your keykloak url, `Sample` with your realm name, `sample-client` with your client name. You can add any scope in addition to roles.
+< NOTE: `openid` scope will be added automatically so we can use code flow only
 
 
 ### Links
