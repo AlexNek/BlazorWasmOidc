@@ -109,7 +109,7 @@ You can run application now and press login. You can see the next page with pred
 < When you press refresh page button then you will need to login again but without typping your credential.
  
 And finally, our user claims:
-![keycloak login image](images/user-claims.png)
+![keycloak user claim image](images/user-claims.png)
 
 ### Links
 1. [Keycloak - main](https://www.keycloak.org/)
