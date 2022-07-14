@@ -30,12 +30,16 @@ Where is the `Keycloak` is settings entry under wwwroot/appsettings.json
 
 }
 ```
-The exact settings depend on the authorization server used and are described in the corresponding section.
+
+The exact settings depend on the authorization server used and are described in the corresponding section.  
+> NOTE: Use branch correspoding to interested section. 
+> branch `keycloak` for keycloak implementation,  
+> branch `auth0` for auth0 implementation
 
 ## Authorization/Identity Server
  - [Keycloak](Docu/keycloak.md)
- - [Auth0](https://auth0.com/)
- - [https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync](https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync "Azure AD Connect")
+ - [Auth0](Docu/auth0.md)
+ - [What is Azure AD Connect cloud sync](https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync "Azure AD Connect")
 ### Links
 
 1. [OIDC: What Is OpenID Connect and How Does It Work? What You Need to Know](https://www.pingidentity.com/en/resources/content-library/articles/openid-connect.html)
