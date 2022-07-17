@@ -6,7 +6,8 @@ Any private data could be stolen on client side. But how we can manage web site 
 One variant is using external autorization server with OpenID Connection (OIDC).
 
 ![image from link1](Docu/images/oidc.png)
-*Image from pingidentity.com (link 1)*
+
+*Image from pingidentity.com <sup>1</sup>*
 
 OIDC is supported out of the box for Blazor standalone web assembly and .NET 6.0
 

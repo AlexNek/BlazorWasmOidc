@@ -17,7 +17,9 @@ namespace BlazorWasmOidc
             builder.Services.AddOidcAuthentication(options =>
             {
                 //builder.Configuration.Bind("Keycloak", options.ProviderOptions);
-                builder.Configuration.Bind("Auth0", options.ProviderOptions);
+                //builder.Configuration.Bind("Auth0", options.ProviderOptions);
+                builder.Configuration.Bind("AzureAd", options.ProviderOptions);
+                
                 // sample for code using
                 //options.ProviderOptions.ResponseType = "code";
                 //options.ProviderOptions.DefaultScopes.Add("address");
