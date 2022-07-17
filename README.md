@@ -6,7 +6,8 @@ Any private data could be stolen on client side. But how we can manage web site 
 One variant is using external autorization server with OpenID Connection (OIDC).
 
 ![image from link1](Docu/images/oidc.png)
-*Image from pingidentity.com (link 1)*
+
+*Image from pingidentity.com <sup>1</sup>*
 
 OIDC is supported out of the box for Blazor standalone web assembly and .NET 6.0
 
@@ -39,7 +40,11 @@ The exact settings depend on the authorization server used and are described in 
 ## Authorization/Identity Server
  - [Keycloak](Docu/keycloak.md)
  - [Auth0](Docu/auth0.md)
- - [What is Azure AD Connect cloud sync](https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync "Azure AD Connect")
+ - [Azure AD](Docu/azuread.md)
+
+### Conclusion
+As usual - it depends from your needs. If you want to write corporate application with existing azure subscription then `azure ad` could be the best choise. If you want to use free solution then `keycloak`. If you can pay for comfort then `auth0`.
+
 ### Links
 
 1. [OIDC: What Is OpenID Connect and How Does It Work? What You Need to Know](https://www.pingidentity.com/en/resources/content-library/articles/openid-connect.html)
